@@ -1,0 +1,32 @@
+[2024-05-10T10:02:52.782+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T10:02:52.829+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: top-links.transform_data manual__2024-05-10T10:02:22.496624+00:00 [queued]>
+[2024-05-10T10:02:52.850+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: top-links.transform_data manual__2024-05-10T10:02:22.496624+00:00 [queued]>
+[2024-05-10T10:02:52.851+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-10T10:02:52.899+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transform_data> on 2024-05-10 10:02:22.496624+00:00
+[2024-05-10T10:02:52.916+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'top-links', 'transform_data', 'manual__2024-05-10T10:02:22.496624+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpopy_vo83']
+[2024-05-10T10:02:52.919+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask transform_data
+[2024-05-10T10:02:52.922+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=85) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T10:02:52.923+0000] {standard_task_runner.py:63} INFO - Started process 94 to run task
+[2024-05-10T10:02:53.058+0000] {task_command.py:426} INFO - Running <TaskInstance: top-links.transform_data manual__2024-05-10T10:02:22.496624+00:00 [running]> on host bb1ba7aa1432
+[2024-05-10T10:02:53.277+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow-demo' AIRFLOW_CTX_DAG_ID='top-links' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:02:22.496624+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:02:22.496624+00:00'
+[2024-05-10T10:02:53.278+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T10:02:53.351+0000] {main.py:46} INFO - Transforming data
+[2024-05-10T10:02:53.874+0000] {python.py:237} INFO - Done. Returned value was:                                            title  ...                website
+0                                         epaper  ...  https://www.dawn.com/
+1                                        live tv  ...  https://www.dawn.com/
+2                                  dawnnews urdu  ...  https://www.dawn.com/
+3                                         images  ...  https://www.dawn.com/
+4                                         herald  ...  https://www.dawn.com/
+..                                           ...  ...                    ...
+522                              contact the bbc  ...   https://www.bbc.com/
+523                            advertise with us  ...   https://www.bbc.com/
+524                 do not share or sell my info  ...   https://www.bbc.com/
+525                    contact technical support  ...   https://www.bbc.com/
+526  read about our approach to external linking  ...   https://www.bbc.com/
+
+[527 rows x 5 columns]
+[2024-05-10T10:02:53.937+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T10:02:54.000+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=top-links, task_id=transform_data, run_id=manual__2024-05-10T10:02:22.496624+00:00, execution_date=20240510T100222, start_date=20240510T100252, end_date=20240510T100254
+[2024-05-10T10:02:54.064+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T10:02:54.114+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T10:02:54.126+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
